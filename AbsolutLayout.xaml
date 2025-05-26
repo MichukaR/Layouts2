@@ -5,16 +5,24 @@
              x:Class="MauiAppLayouts.AbsolutLayout"
              Title="Absolute Layout"
              BackgroundColor="#f3c8dd">
-    <ContentPage.Content>
     <AbsoluteLayout>
+        <Image Source="img1.png"
+               AbsoluteLayout.LayoutBounds="0,0,1,Autosize"
+               AbsoluteLayout.LayoutFlags="WidthProportional" 
+               />
         
-        <Image Source="https://placehold.co/600x200/ADD8E6/000000?text=Encabezado+Fijo"
-               Aspect="AspectFill"
-               AbsoluteLayout.LayoutBounds="0,0,1,AutoSize"
-               AbsoluteLayout.LayoutFlags="WidthProportional" />
+        <ScrollView AbsoluteLayout.LayoutBounds="0,0,0,Autosize"
+                    AbsoluteLayout.LayoutFlags="WidthProportional, HeightProportional">
+            <StackLayout Padding="20">
+                <Label Text="Verificador de scroll"
+                       FontSize="16"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
+            </StackLayout>
+        </ScrollView>
+        
         
         <Button Text="Inicio"
-                FontFamily="Impact"
                 AbsoluteLayout.LayoutBounds="1,1,AutoSize,AutoSize"
                 AbsoluteLayout.LayoutFlags="PositionProportional"
                 Margin="0,0,20,20"
@@ -25,6 +33,4 @@
                 Clicked="BotonAlInicio"/>
 
     </AbsoluteLayout>
-
-    </ContentPage.Content>
 </ContentPage>
