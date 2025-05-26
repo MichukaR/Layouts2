@@ -15,19 +15,19 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Frame Grid.Row="0" Grid.Column="0" BackgroundColor="#4b1535" Padding="0" HasShadow="False">
+            <Frame Grid.Row="0" Grid.Column="0" BackgroundColor="#4b1535" Padding="0" >
                 
             </Frame>
 
-            <Frame Grid.Row="0" Grid.Column="1" BackgroundColor="#f3c8dd" Padding="0" HasShadow="False">
+            <Frame Grid.Row="0" Grid.Column="1" BackgroundColor="#f3c8dd" Padding="0" >
                 
             </Frame>
 
-            <Frame Grid.Row="1" Grid.Column="0" BackgroundColor="#d183a9" Padding="0" HasShadow="False">
+            <Frame Grid.Row="1" Grid.Column="0" BackgroundColor="#d183a9" Padding="0" >
                 
             </Frame>
 
-            <Frame Grid.Row="1" Grid.Column="1" BackgroundColor="#7e2a53" Padding="0" HasShadow="False">
+            <Frame Grid.Row="1" Grid.Column="1" BackgroundColor="#7e2a53" Padding="0" >
                 <Button Text="Stack Layout" 
                         BackgroundColor="LavenderBlush"
                        HorizontalOptions="Center" 
