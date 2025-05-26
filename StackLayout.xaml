@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppLayouts.StackLayout"
+             BackgroundColor="#4c1208">
+    <ScrollView>
+        <StackLayout Orientation="Vertical"
+                     Spacing="10"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center">
+            <Label Text="MICHELLE"
+                   FontFamily="Copperplate"
+                   FontSize="40"
+                   TextColor="Thistle"
+                   HorizontalOptions="Center"/>
+            <Label Text="REYES"
+                   FontFamily="Copperplate"
+                   FontSize="50"
+                   TextColor="Thistle"
+                   HorizontalOptions="Center"/>
+            <Label Text="DELGADO"
+                   FontFamily="Copperplate"
+                   FontSize="30"
+                   TextColor="Thistle"
+                   HorizontalOptions="Center"/>
+            <BoxView HeightRequest="30" WidthRequest="0" Color="Transparent" />
+                
+            <Button 
+                FontFamily="Copperplate"
+                BackgroundColor="#893a49"
+                Text="Flex Layout" 
+                HorizontalOptions="Center" 
+                FontSize="20"
+                TextColor="LavenderBlush"
+                Clicked="BotonAFlex"/>
+            
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

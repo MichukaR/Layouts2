@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppLayouts.FlexLayout"
+             Title="FlexLayout">
+        <FlexLayout Direction="Row"
+                    Wrap="Wrap"
+                    AlignItems="Center"
+                    Padding="20"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand">
+            
+        <Button Text="Botón 1"
+                FontFamily="Times"
+                WidthRequest="100"
+                HeightRequest="50"
+                Margin="10"
+                BackgroundColor="#4b1535"
+                TextColor="White"
+                CornerRadius="10" />
+
+
+        <Button Text="Botón 2"
+                FontFamily="Times"
+                WidthRequest="100"
+                HeightRequest="50"
+                Margin="10"
+                BackgroundColor="#7e2a53"
+                TextColor="White"
+                CornerRadius="10" />
+
+       
+        <Button Text="Botón 3"
+                FontFamily="Times"
+                WidthRequest="100"
+                HeightRequest="50"
+                Margin="10"
+                BackgroundColor="#4b1535"
+                TextColor="White"
+                CornerRadius="10" />
+
+        <Button Text="Botón 4"
+                FontFamily="Times"
+                WidthRequest="100"
+                HeightRequest="50"
+                Margin="10"
+                BackgroundColor="#7e2a53"
+                TextColor="White"
+                CornerRadius="10" />
+        <Label Text="/n"/>
+        <Button Text="Absolute Layout"
+                FontFamily="Times"
+                Clicked="BotonAAbsolute"
+                WidthRequest="150"
+                HeightRequest="50"
+                BackgroundColor="#CA99AB"
+                TextColor="#4b1535"
+                CornerRadius="10" />
+        </FlexLayout>
+</ContentPage>
