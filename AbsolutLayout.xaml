@@ -3,87 +3,25 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppLayouts.AbsolutLayout"
-             Title="Absolute Layout">
+             Title="Absolute Layout"
+             BackgroundColor="#f3c8dd">
     <ContentPage.Content>
     <AbsoluteLayout>
-
-        <!--
-        Imagen en la parte superior.
-        AbsoluteLayout.LayoutBounds="0,0,1,AutoSize"
-            - X=0, Y=0: Posiciona la imagen en la esquina superior izquierda.
-            - Width=1: La imagen ocupará el 100% del ancho del AbsoluteLayout.
-            - Height=AutoSize: La altura se ajustará automáticamente según el contenido.
-        AbsoluteLayout.LayoutFlags="WidthProportional"
-            - Indica que el ancho (Width=1) es proporcional al ancho del contenedor.
-        -->
+        
         <Image Source="https://placehold.co/600x200/ADD8E6/000000?text=Encabezado+Fijo"
                Aspect="AspectFill"
                AbsoluteLayout.LayoutBounds="0,0,1,AutoSize"
                AbsoluteLayout.LayoutFlags="WidthProportional" />
-
-        <!--
-        ScrollView para el contenido desplazable.
-        AbsoluteLayout.LayoutBounds="0,200,1,1"
-            - X=0, Y=200: Posiciona el ScrollView 200 unidades por debajo del borde superior
-                         (asumiendo que la imagen tiene una altura de 200px, aunque AutoSize ajustará).
-                         Es mejor usar un valor proporcional o un margen si la altura de la imagen
-                         puede variar, pero para este ejemplo, un valor fijo es ilustrativo.
-                         Una alternativa más robusta sería calcular la altura de la imagen
-                         en el código subyacente o usar un Grid.
-            - Width=1, Height=1: Ocupa el 100% del ancho y el 100% de la altura restante.
-        AbsoluteLayout.LayoutFlags="All"
-            - Indica que todas las propiedades de LayoutBounds (X, Y, Width, Height) son proporcionales.
-              En este caso, Y se usa como un valor absoluto para desplazarlo debajo de la imagen.
-              Para que Y sea proporcional, se necesitaría un valor entre 0 y 1.
-              Aquí, Y=200 es un valor absoluto para demostrar el desplazamiento.
-              Si la imagen es de altura variable, es mejor usar un enfoque diferente (como Grid)
-              o calcular dinámicamente la posición del ScrollView.
-        -->
-        <ScrollView AbsoluteLayout.LayoutBounds="0,200,1,1"
-                    AbsoluteLayout.LayoutFlags="WidthProportional,HeightProportional">
-            <StackLayout Padding="20">
-                <Label Text="Este es un contenido desplazable." FontSize="Medium" TextColor="{AppThemeBinding Light=Black, Dark=White}" />
-                <Label Text="Puedes añadir mucho más texto aquí para ver el efecto de scroll." FontSize="Small" TextColor="{AppThemeBinding Light=Black, Dark=White}" />
-                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                       FontSize="Small"
-                       TextColor="{AppThemeBinding Light=Black, Dark=White}" />
-                <Label Text="Más contenido para asegurar que haya scroll." FontSize="Small" TextColor="{AppThemeBinding Light=Black, Dark=White}" />
-                <Label Text="Aliquam erat volutpat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                       FontSize="Small"
-                       TextColor="{AppThemeBinding Light=Black, Dark=White}" />
-                <Label Text="Fin del contenido desplazable." FontSize="Medium" TextColor="{AppThemeBinding Light=Black, Dark=White}" />
-                <Label Text="Más contenido para asegurar que haya scroll." FontSize="Small" TextColor="{AppThemeBinding Light=Black, Dark=White}" />
-                <Label Text="Aliquam erat volutpat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                       FontSize="Small"
-                       TextColor="{AppThemeBinding Light=Black, Dark=White}" />
-                <Label Text="Fin del contenido desplazable." FontSize="Medium" TextColor="{AppThemeBinding Light=Black, Dark=White}" />
-                 <Label Text="Más contenido para asegurar que haya scroll." FontSize="Small" TextColor="{AppThemeBinding Light=Black, Dark=White}" />
-                <Label Text="Aliquam erat volutpat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                       FontSize="Small"
-                       TextColor="{AppThemeBinding Light=Black, Dark=White}" />
-                <Label Text="Fin del contenido desplazable." FontSize="Medium" TextColor="{AppThemeBinding Light=Black, Dark=White}" />
-            </StackLayout>
-        </ScrollView>
-
-        <!--
-        Botón en la esquina inferior derecha.
-        AbsoluteLayout.LayoutBounds="1,1,AutoSize,AutoSize"
-            - X=1, Y=1: Posiciona el botón en la esquina inferior derecha (proporcionalmente).
-            - Width=AutoSize, Height=AutoSize: El tamaño del botón se ajusta a su contenido.
-        AbsoluteLayout.LayoutFlags="PositionProportional"
-            - Indica que las propiedades de posición (X, Y) son proporcionales al tamaño del contenedor.
-        Margin="0,0,20,20"
-            - Añade un margen de 20 unidades desde la derecha y la parte inferior
-              para separarlo del borde de la pantalla.
-        -->
+        
         <Button Text="Inicio"
+                FontFamily="Impact"
                 AbsoluteLayout.LayoutBounds="1,1,AutoSize,AutoSize"
                 AbsoluteLayout.LayoutFlags="PositionProportional"
                 Margin="0,0,20,20"
                 Padding="15"
-                BackgroundColor="{AppThemeBinding Light=#FF5722, Dark=#FF8A65}"
+                BackgroundColor="#4b1535"
                 TextColor="White"
-                CornerRadius="25"
+                CornerRadius="10"
                 Clicked="BotonAlInicio"/>
 
     </AbsoluteLayout>
